@@ -8,17 +8,11 @@ class ConnectionOld{
 	
 	private $driver="mysql";
 	
-	/*private $host ="vmwpmys2.sidor.net";
-    private $user="adminmy";
-    private $pass='sid458321';*/
+	private $host ="xxxxxxxxxx";
+    private $user="yyyyyyyy";
+    private $pass='sid458321';
 	
-	/*private $host ="sirdevapcmysql01";
-	private $user="myadmin";
-	private $pass='sid2538';*/
-	
-	private $host ="vmwpmys1";
-	private $user="myadmin";
-	private $pass='sid2538';
+
 
 
 	private $dbName="hcm_db";
