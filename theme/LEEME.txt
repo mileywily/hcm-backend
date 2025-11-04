@@ -1,0 +1,4 @@
+
+Ruta del estilo a colocar en el angular.json
+
+./node_modules/primeng/resources/themes/nova-light/theme-sidor.css"

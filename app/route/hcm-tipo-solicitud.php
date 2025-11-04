@@ -1,0 +1,150 @@
+<?php
+
+use App\Model\TipoSolicitudModel;
+
+$app->group('/api/', function () {
+    
+    $this->get('tiposolicitudes/test', function ($req, $res, $args) {
+        return $res->getBody()
+                   ->write('Hello');
+    });
+    
+    //Obtener todos los registros
+    $this->get('tiposolicitudes', function ($req, $res, $args) {
+        
+        $um = new TipoSolicitudModel(null);
+        
+        return $res
+           ->withHeader('Content-type', 'application/json')
+           ->getBody()
+           ->write(
+            json_encode(
+                $um->GetAll()
+            )
+        );
+    });
+
+    //Obtener todos los registros para lista en combos
+    $this->get('tiposolicitudes/listar', function ($req, $res, $args) {
+
+        $um = new TipoSolicitudModel(null);
+        
+        return $res
+            ->withHeader('Content-type', 'application/json')
+            ->getBody()
+            ->write(
+            json_encode(
+                $um->getAllCombo()
+            )
+        );
+    });
+
+    //Obtener todos los registros para lista en combos
+    $this->get('tiposolicitudes/listaractivos', function ($req, $res, $args) {
+
+        $um = new TipoSolicitudModel(null);
+        
+        return $res
+            ->withHeader('Content-type', 'application/json')
+            ->getBody()
+            ->write(
+            json_encode(
+                $um->getAllActivos()
+            )
+        );
+    });
+
+    //Obtener registro por id
+    $this->get('tiposolicitudes/{id}', function ($req, $res, $args) {
+        
+		$um = new TipoSolicitudModel(null);
+        $um->tipo_solicitud_id =  $args['id'];
+        
+        return $res
+           ->withHeader('Content-type', 'application/json')
+           ->getBody()
+           ->write(
+            json_encode(
+                $um->getById($um->tipo_solicitud_id)
+            )
+        );
+    });
+
+    //Insertar registro
+    $this->post('tiposolicitudes', function ($req, $res) {
+         
+		 $um = new TipoSolicitudModel($req->getParsedBody());
+                
+        return $res
+           ->withHeader('Content-type', 'application/json')
+           ->getBody()
+           ->write(
+            json_encode(
+                $um->create()
+            )
+        );
+    });
+
+    //Actualizar registro
+    $this->put('tiposolicitudes', function ($req, $res) {
+        
+		$um = new TipoSolicitudModel($req->getParsedBody());
+        
+        return $res
+           ->withHeader('Content-type', 'application/json')
+           ->getBody()
+           ->write(
+            json_encode(
+                $um->update()
+            )
+        );
+    });
+    
+    //Eliminar registro por id
+    //
+    $this->delete('tiposolicitudes/{id}', function ($req, $res, $args) {
+        
+		$um = new TipoSolicitudModel(null);
+        $um->tipo_solicitud_id = $args["id"]; 
+
+        
+        return $res
+           ->withHeader('Content-type', 'application/json')
+           ->getBody()
+           ->write(
+            json_encode(
+                $um->delete($um->tipo_solicitud_id)
+            )
+        );
+    });
+
+    $this->delete('tiposolicitudes', function ($req, $res) {
+        
+		$um = new TipoSolicitudModel(null);
+        
+        return $res
+           ->withHeader('Content-type', 'application/json')
+           ->getBody()
+           ->write(
+            json_encode(
+                $um->deleteAll()
+            )
+        );
+    });
+
+    //Eliminar registros por lote 
+    $this->post('tiposolicitudes/eliminarLote', function ($req, $res) {
+        $um = new TipoSolicitudModel(null);
+        
+        return $res
+        ->withHeader('Content-type', 'application/json')
+        ->getBody()
+        ->write(
+            json_encode(
+                $um->deleteByLote(
+                    $req->getParsedBody()
+                )
+            )
+        );
+    });
+});
