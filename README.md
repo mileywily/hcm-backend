@@ -1,116 +1,41 @@
-# Nombre de tu Proyecto
+HCM Back-End API
+Descripción del Proyecto
+Este repositorio contiene la lógica de negocio central y el motor de procesamiento de datos para un sistema de Gestión de Capital Humano (HCM) y Nómina. La API está diseñada bajo principios de escalabilidad y seguridad para manejar procesos críticos de talento humano, desde la gestión de estructuras organizativas hasta el cálculo automatizado de beneficios legales.
 
-## Descripción del Proyecto
+Características Técnicas
 
-[Aquí va una descripción breve y concisa de tu proyecto. ¿Qué es? ¿Qué hace?]
+Arquitectura RESTful: Implementación de endpoints optimizados para operaciones CRUD y procesos complejos de nómina.
 
-## Tabla de Contenidos
 
-- [Descripción General](#descripción-general)
-- [Motivación](#motivación)
-- [Problema que Resuelve](#problema-que-resuelve)
-- [Características Principales](#características-principales)
-- [Diferenciación del Proyecto](#diferenciación-del-proyecto)
-- [Aprendizajes](#aprendizajes)
-- [Requisitos Previos](#requisitos-previos)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación](#instalación)
-- [Ejecución](#ejecución)
+Motor de Reglas de Negocio: Lógica programada en Python para la automatización de cálculos de beneficios, deducciones y cumplimiento normativo.
 
-## Descripción General
 
-[Aquí va una descripción general breve y concisa de tu proyecto. ¿Qué es? ¿Qué hace? ¿Cuál es su propósito principal?]
+Seguridad de Datos: Gestión de variables de entorno para protección de credenciales y validaciones de integridad referencial en la base de datos.
 
-## Motivación
 
-[Explica por qué construiste el proyecto y cuál fue la inspiración o necesidad que lo impulsó.]
+Persistencia Robusta: Diseño de esquemas para bases de datos relacionales, garantizando trazabilidad en cada transacción.
 
-## Problema que Resuelve
+Stack Tecnológico
 
-[Describe el problema específico que tu proyecto está diseñado para solucionar y a quién beneficia.]
+Lenguaje: Python 3.x.
 
-## Características Principales
 
-[Enumera y describe las funcionalidades clave y las características más importantes de tu proyecto.]
+Framework: FastAPI / Flask (según tu implementación actual).
 
-## Diferenciación del Proyecto
 
-[Aquí puedes destacar qué hace que tu proyecto sea único o mejor que otras soluciones existentes.]
+Base de Datos: Oracle / PostgreSQL / SQL Server.
 
-## Aprendizajes
 
-[Comparte qué aprendiste durante el desarrollo del proyecto, qué desafíos superaste o qué nuevas tecnologías utilizaste.]
+Control de Versiones: Git / GitLab.
 
-## Requisitos Previos
+Instalación y Uso
+Clonar el repositorio: git clone https://github.com/mileywily/hcm-backend.git
 
-Antes de comenzar, asegúrate de tener instalado lo siguiente:
+Instalar dependencias: pip install -r requirements.txt
 
-*   [Requisito 1 (ej: Node.js v16+)]
-*   [Requisito 2 (ej: Python 3.9+)]
-*   [Requisito 3 (ej: MySQL)]
+Configurar variables de entorno en archivo .env.
 
-## Tecnologías Utilizadas
+Ejecutar servidor: python main.py
 
-Este proyecto utiliza las siguientes tecnologías:
-
-*   **Frontend:**
-    *   [Tecnología 1 (ej: React, Angular, Vue.js)]
-    *   [Tecnología 2 (ej: Redux, Vuex)]
-    *   [Tecnología 3 (ej: Tailwind CSS, Bootstrap)]
-*   **Backend:**
-    *   [Tecnología 1 (ej: Node.js, Python, Java)]
-    *   [Tecnología 2 (ej: Express, Django, Spring Boot)]
-    *   [Tecnología 3 (ej: PostgreSQL, MongoDB)]
-*   **Otros:**
-    *   [Tecnología 1 (ej: Docker)]
-    *   [Tecnología 2 (ej: Git)]
-
-## Instalación
-
-Para instalar y configurar el proyecto localmente, sigue los siguientes pasos:
-
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_PROYECTO>
-    ```
-
-2.  **Configurar el entorno (si aplica):**
-    [Por ejemplo, para proyectos Node.js, Python, etc.]
-    ```bash
-    # Ejemplo para Node.js
-    npm install
-    # o
-    yarn install
-
-    # Ejemplo para Python
-    pip install -r requirements.txt
-    ```
-
-3.  **Configuración de la base de datos (si aplica):**
-    [Instrucciones para configurar la base de datos, migraciones, etc.]
-
-4.  **Variables de entorno (si aplica):**
-    Crea un archivo `.env` en la raíz del proyecto y añade las variables de entorno necesarias:
-    ```
-    VARIABLE_UNO=valor
-    VARIABLE_DOS=otro_valor
-    ```
-
-## Ejecución
-
-Para ejecutar el proyecto después de la instalación, sigue estos pasos:
-
-1.  **Iniciar el servidor/aplicación:**
-    ```bash
-    # Ejemplo para Node.js
-    npm start
-    # o
-    yarn start
-
-    # Ejemplo para Python
-    python app.py
-    ```
-
-2.  **Acceder a la aplicación:**
-    [Indica la URL donde la aplicación estará disponible, por ejemplo: `http://localhost:3000`]
+Autor
+Mileida Blanco - Senior Backend Engineer - LinkedIn
